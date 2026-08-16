@@ -1,0 +1,184 @@
+/* =========================
+   Logomarca
+========================= */
+
+.logomarca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  user-select: none;
+}
+
+.logomarca h1 {
+  font-family: "Press Start 2P", system-ui;
+  color: rgb(87, 158, 252);
+  text-shadow: 0 0 10px rgb(87, 158, 252);
+
+  animation: piscar 2s ease-in-out infinite;
+}
+
+.tech {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.start {
+  color: rgb(87, 158, 252);
+  text-shadow: 0 0 10px rgb(87, 158, 252);
+}
+
+.cores-invertidas .tech {
+  color: rgb(87, 158, 252);
+  text-shadow: 0 0 10px rgb(87, 158, 252);
+}
+
+.cores-invertidas .start {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+/* =========================
+   Panda
+========================= */
+
+.panda-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.panda-wrapper.arrastando {
+  cursor: grabbing;
+}
+
+.panda-wrapper img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.panda-wrapper:not(.arrastando):hover img {
+  animation: panda-hover 0.5s ease;
+}
+
+/* =========================
+   Interruptor de cores
+========================= */
+
+.color-switch {
+  width: 48px;
+  height: 26px;
+  padding: 3px;
+
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #6ea8ff;
+  border-radius: 4px;
+
+  background: #071019;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 8px rgba(110, 168, 255, 0.35),
+    inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.switch-knob {
+  width: 16px;
+  height: 16px;
+
+  background: red;
+
+  box-shadow:
+    2px 0 0 #8a0000,
+    0 2px 0 #8a0000;
+
+  transition:
+    transform 0.12s ease-out,
+    background 0.12s ease-out,
+    box-shadow 0.12s ease-out;
+}
+
+.color-switch.ativo .switch-knob {
+  transform: translateX(20px);
+
+  background: rgb(87, 158, 252);
+
+  box-shadow:
+    -2px 0 0 rgb(33, 91, 167),
+    0 2px 0 rgb(33, 91, 167);
+}
+
+/* =========================
+   Animações
+========================= */
+
+@keyframes piscar {
+  0%, 12% {
+    opacity: 1;
+  }
+
+  15%, 22% {
+    opacity: 0;
+  }
+
+  25%, 32% {
+    opacity: 1;
+  }
+
+  35%, 42% {
+    opacity: 0;
+  }
+
+  45%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes panda-hover {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* =========================
+   Responsividade
+========================= */
+
+@media (max-width: 600px) {
+  .logomarca {
+    gap: 10px;
+  }
+
+  .logomarca h1 {
+    font-size: 1.3rem;
+  }
+
+  .panda-wrapper img {
+    width: 34px;
+    height: 34px;
+  }
+}

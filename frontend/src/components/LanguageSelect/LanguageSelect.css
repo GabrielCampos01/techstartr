@@ -1,0 +1,118 @@
+.language-select {
+  position: relative;
+  width: 100%;
+}
+
+.language-select-trigger {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(110, 168, 255, 0.18);
+  border-radius: 14px;
+
+  background: #08111c;
+  color: #eef5f0;
+
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-select-trigger:focus {
+  outline: none;
+  border-color: #6ea8ff;
+  box-shadow: 0 0 0 4px rgba(110, 168, 255, 0.16);
+}
+
+.language-select-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+
+  display: grid;
+  overflow: hidden;
+
+  border: 1px solid rgba(110, 168, 255, 0.18);
+  border-radius: 14px;
+
+  background: #08111c;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.language-select-option {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 16px;
+
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 12px;
+
+  border: none;
+
+  background: transparent;
+  color: #eef5f0;
+
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-select-option:hover {
+  background: rgba(110, 168, 255, 0.12);
+}
+
+.language-name {
+  white-space: nowrap;
+}
+
+.language-example {
+  overflow: hidden;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  line-height: 1.6;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.code-default {
+  color: #d4d4d4;
+}
+
+.code-class {
+  color: #4ec9b0;
+}
+
+.code-object {
+  color: #9cdcfe;
+}
+
+.code-property {
+  color: #9cdcfe;
+}
+
+.code-function {
+  color: #dcdcaa;
+}
+
+.code-string {
+  color: #ce9178;
+}
+
+.language-icon {
+  width: 20px;
+  height: 20px;
+
+  justify-self: end;
+}
