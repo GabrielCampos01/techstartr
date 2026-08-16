@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBxZuLvIo-juRtQzrPqsiOJe3x_KaXLJp0",
-  authDomain: "techstartr-a80b2.firebaseapp.com",
-  projectId: "techstartr-a80b2",
-  storageBucket: "techstartr-a80b2.firebasestorage.app",
-  messagingSenderId: "480583670358",
-  appId: "1:480583670358:web:7d340c8fa209ab177c79f7",
+  apiKey: "AIzaSyAhJGp39N1vuWg4jD2bPwVfMf2zZNOk1A4",
+  authDomain: "techstart-ccf52.firebaseapp.com",
+  projectId: "techstart-ccf52",
+  storageBucket: "techstart-ccf52.firebasestorage.app",
+  messagingSenderId: "445503292261",
+  appId: "1:445503292261:web:e8648de1b838570b2ad78c",
 };
 
 const app = initializeApp(firebaseConfig);

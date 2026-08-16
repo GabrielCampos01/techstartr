@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import "./Login.css";
 import "../../styles/Auth.css";
-import { loginComEmail } from "../../services/auth";
+import { entrarComEmail } from "../../services/auth";
 import panda from "../../assets/panda.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [carregando, setCarregando] = useState(false);
@@ -68,7 +70,8 @@ function Login() {
     setCarregando(true);
 
     try {
-      await loginComEmail(email, senha);
+      await entrarComEmail(email, senha);
+      navigate("/painel");
     } catch (error) {
       console.error("Erro ao realizar login:", error);
       setErro("Não foi possível realizar o login.");
@@ -145,7 +148,7 @@ function Login() {
         <div className="auth-links">
           <p>
             Esqueceu sua senha?{" "}
-            <a href="#">Esqueci minha senha</a>
+            <Link to="/recuperar-senha">Esqueci minha senha</Link>
           </p>
 
           <p>

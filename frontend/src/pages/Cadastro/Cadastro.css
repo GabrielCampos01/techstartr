@@ -30,12 +30,6 @@
   margin-bottom: 24px;
 }
 
-.back-link,
-.login-link {
-  color: #aac6df;
-  text-decoration: none;
-}
-
 .section-label {
   color: #6ea8ff;
 
@@ -53,6 +47,32 @@
 .switch-auth {
   color: #aac6df;
   line-height: 1.6;
+}
+
+
+/* =========================
+   Botão voltar
+========================= */
+
+.back-button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #aac6df;
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+  color: #a2cffc;
+  transform: translateX(-2px);
 }
 
 
@@ -100,10 +120,12 @@
 .register-form select:focus,
 .register-form textarea:focus {
   outline: none;
+
   border-color: #6ea8ff;
-  box-shadow: 0 0 0 4px rgba(110, 168, 255, 0.16);
 
   background: rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 0 0 4px rgba(110, 168, 255, 0.16);
 }
 
 
@@ -145,7 +167,7 @@
 
 
 /* =========================
-   Botão
+   Botão cadastrar
 ========================= */
 
 .primary-button {
@@ -159,6 +181,7 @@
   color: #06120f;
 
   font-weight: 700;
+
   cursor: pointer;
 
   box-shadow: 0 14px 28px rgba(110, 168, 255, 0.16);
@@ -167,12 +190,12 @@
 }
 
 .primary-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 
 /* =========================
-   Feedback e login
+   Feedback
 ========================= */
 
 .feedback {
@@ -185,6 +208,11 @@
 .feedback.success {
   color: #7bd7a0;
 }
+
+
+/* =========================
+   Login
+========================= */
 
 .switch-auth {
   margin-top: 16px;
