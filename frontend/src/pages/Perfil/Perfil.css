@@ -1,0 +1,108 @@
+.profile-page {
+  width: min(920px, 100%);
+}
+
+.profile-header {
+  margin-bottom: 24px;
+}
+
+.profile-label {
+  margin-bottom: 8px;
+
+  color: #6ea8ff;
+
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.profile-header h1 {
+  color: #eef5f0;
+  font-size: 2rem;
+}
+
+.profile-card {
+  display: grid;
+  gap: 18px;
+
+  padding: 24px;
+
+  border: 1px solid rgba(110, 168, 255, 0.18);
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.profile-card label {
+  display: grid;
+  gap: 8px;
+
+  color: #aac6df;
+  font-size: 0.95rem;
+}
+
+.profile-card input,
+.profile-card select,
+.profile-card textarea {
+  padding: 14px 16px;
+
+  border: 1px solid rgba(110, 168, 255, 0.18);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #eef5f0;
+
+  font: inherit;
+}
+
+.profile-card input:focus,
+.profile-card select:focus,
+.profile-card textarea:focus {
+  outline: none;
+
+  border-color: #6ea8ff;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 0 0 4px rgba(110, 168, 255, 0.16);
+}
+
+.profile-card textarea {
+  resize: vertical;
+}
+
+.profile-card button {
+  min-height: 50px;
+
+  border: none;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #6ea8ff, #8cc9ff);
+  color: #06120f;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.profile-feedback {
+  color: #aac6df;
+}
+
+@media (max-width: 720px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -71,7 +71,7 @@ function Login() {
 
     try {
       await entrarComEmail(email, senha);
-      navigate("/painel");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Erro ao realizar login:", error);
       setErro("Não foi possível realizar o login.");

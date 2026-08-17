@@ -70,7 +70,7 @@ function Cadastro() {
         bio: form.bio,
       });
 
-      navigate("/painel");
+      navigate("/dashboard");
     } catch (error) {
       console.error(error);
       setFeedback("Não foi possível criar sua conta.");

@@ -1,0 +1,46 @@
+.sidebar {
+  min-height: 100vh;
+  padding: 28px 20px;
+
+  border-right: 1px solid rgba(110, 168, 255, 0.18);
+
+  background: rgba(5, 12, 18, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.sidebar-brand {
+  margin-bottom: 32px;
+
+  color: #eef5f0;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-nav a {
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  color: #aac6df;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(110, 168, 255, 0.08);
+  color: #eef5f0;
+}
+
+.sidebar-nav a.active {
+  background: rgba(110, 168, 255, 0.16);
+  color: #6ea8ff;
+}

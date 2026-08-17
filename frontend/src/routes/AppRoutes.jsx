@@ -1,8 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import RecuperarSenha from "../pages/RecuperarSenha/RecuperarSenha";
+
 import Login from "../pages/Login/Login";
 import Cadastro from "../pages/Cadastro/Cadastro";
-import Painel from "../pages/Painel/Painel";
+import RecuperarSenha from "../pages/RecuperarSenha/RecuperarSenha";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import Perfil from "../pages/Perfil/Perfil";
+
+import AppLayout from "../layouts/AppLayout/AppLayout";
+import ProtectedRoute from "./ProtectedRoute";
 
 function AppRoutes() {
   return (
@@ -10,7 +15,17 @@ function AppRoutes() {
       <Route path="/" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/recuperar-senha" element={<RecuperarSenha />} />
-      <Route path="/painel" element={<Painel />} />
+      
+      <Route
+        element={
+          <ProtectedRoute>
+            <AppLayout />
+          </ProtectedRoute>
+        }
+      >
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/perfil" element={<Perfil />} />
+      </Route>
     </Routes>
   );
 }
